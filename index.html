@@ -2,39 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Awesome Project</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="display" disabled />
-    <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="deleteLast()">⌫</button>
-      <button onclick="append('%')">%</button>
-      <button onclick="append('/')">÷</button>
+  <header>
+    <div class="logo">MyProject</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <button onclick="append('7')">7</button>
-      <button onclick="append('8')">8</button>
-      <button onclick="append('9')">9</button>
-      <button onclick="append('*')">×</button>
+  <section id="home">
+    <h1>Welcome to My Awesome Project</h1>
+    <p>This is a simple modern template inspired by portfolio designs.</p>
+    <a href="#project" class="btn">View Project</a>
+  </section>
 
-      <button onclick="append('4')">4</button>
-      <button onclick="append('5')">5</button>
-      <button onclick="append('6')">6</button>
-      <button onclick="append('-')">−</button>
-
-      <button onclick="append('1')">1</button>
-      <button onclick="append('2')">2</button>
-      <button onclick="append('3')">3</button>
-      <button onclick="append('+')">+</button>
-
-      <button onclick="append('0')">0</button>
-      <button onclick="append('.')">.</button>
-      <button onclick="calculate()">=</button>
+  <section id="project">
+    <h2>Featured Project</h2>
+    <div class="card">
+      <h3>Smart Calculator</h3>
+      <p>A beautiful calculator built with HTML, CSS, and JavaScript.</p>
+      <a href="#" target="_blank">View Live</a>
     </div>
-  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyProject. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
